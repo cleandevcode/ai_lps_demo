@@ -23,6 +23,7 @@ import React, { Fragment } from "react";
 import Sticky from "react-stickynode";
 import { ThemeProvider } from "styled-components";
 import ServicesSection from "containers/Agency/ServicesSection/index.jsx";
+import SimpleForm from "containers/WebApp/ChatBot/SimpleForm";
 
 const WebAppMinimal = ({ showChat = false }) => {
   return (
