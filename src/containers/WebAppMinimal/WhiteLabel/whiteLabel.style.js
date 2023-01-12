@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Parallax } from "react-parallax";
 import pattern1 from "common/assets/image/webAppMinimal/banner-pattern-1.png";
 
-export const Section = styled(Parallax)`
+const Section = styled(Parallax)`
   background-color: #011336;
   color: white;
   padding-top: 130px;
@@ -122,3 +122,5 @@ export const SectionHeading = styled.div`
     }
   }
 `;
+
+export default Section;

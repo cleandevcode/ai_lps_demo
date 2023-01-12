@@ -1,8 +1,7 @@
 import React from "react";
 import Container from "common/components/UI/Container";
 import Heading from "common/components/Heading";
-import {
-  Section,
+import Section, {
   Grid,
   FooterWidget,
   SectionHeading,
