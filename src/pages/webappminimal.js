@@ -24,7 +24,7 @@ import Sticky from "react-stickynode";
 import { ThemeProvider } from "styled-components";
 import ServicesSection from "containers/Agency/ServicesSection/index.jsx";
 
-const WebAppMinimal = () => {
+const WebAppMinimal = ({ showChat = false }) => {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
