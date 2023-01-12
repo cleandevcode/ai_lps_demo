@@ -1,19 +1,20 @@
-import React, { useState, Fragment } from 'react';
-import Heading from 'common/components/Heading';
-import Container from 'common/components/UI/Container';
-import { Icon } from 'react-icons-kit';
-import { plus } from 'react-icons-kit/entypo/plus';
-import { minus } from 'react-icons-kit/entypo/minus';
-import Section, { SectionHeading, RcCollapse } from './faq.style';
-import { Panel } from 'rc-collapse';
-import motion from './motion-util';
+import React, { useState, Fragment } from "react";
+import Heading from "common/components/Heading";
+import Container from "common/components/UI/Container";
+import { Icon } from "react-icons-kit";
+import { plus } from "react-icons-kit/entypo/plus";
+import { minus } from "react-icons-kit/entypo/minus";
+import Section, { SectionHeading, RcCollapse } from "./faq.style";
+import { Panel } from "rc-collapse";
+import motion from "./motion-util";
 
-import { faqs } from 'common/data/WebAppMinimal';
+import { faqs } from "common/data/WebAppMinimal";
 
 const Faq = () => {
-  const [activeKey, setActiveKey] = useState(1);
+  const [activeKey, setActiveKey] = useState(-1);
 
   const onChange = (activeKey) => {
+    console.log({ activeKey });
     setActiveKey(activeKey);
   };
 

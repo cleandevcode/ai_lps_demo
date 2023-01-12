@@ -106,6 +106,20 @@ export const FooterWidget = styled.div`
   .icon {
     width: 30px;
   }
+
+  .rc-collapse-header-text {
+    color: white;
+    font-weight: 500;
+  }
+
+  .rc-collapse-content {
+    background-color: #011336;
+    border-bottom: unset;
+  }
+
+  .rc-collapse > .rc-collapse-item {
+    border: unset;
+  }
 `;
 
 export const SectionHeading = styled.div`
@@ -123,4 +137,7 @@ export const SectionHeading = styled.div`
   }
 `;
 
+export const AccordionContent = styled.span`
+  color: white;
+`;
 export default Section;

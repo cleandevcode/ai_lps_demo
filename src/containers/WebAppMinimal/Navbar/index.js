@@ -118,14 +118,13 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
                 offset={-100}
               />
 
-            
               <Button
                 {...button}
                 iconPosition="left"
                 title="Login Now"
                 onClick={handleLoginModal}
               />
-                <br/>
+              <br />
               <Button
                 {...button}
                 iconPosition="left"

@@ -1,24 +1,24 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import { openModal, closeModal } from '@redq/reuse-modal';
-import NavbarWrapper from 'common/components/Navbar';
-import Drawer from 'common/components/Drawer';
-import Button from 'common/components/Button';
-import Logo from 'common/components/UIElements/Logo';
-import Box from 'common/components/Box';
-import HamburgMenu from 'common/components/HamburgMenu';
-import Container from 'common/components/UI/Container';
-import { DrawerContext } from 'common/contexts/DrawerContext';
+import React, { useContext } from "react";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import { openModal, closeModal } from "@redq/reuse-modal";
+import NavbarWrapper from "common/components/Navbar";
+import Drawer from "common/components/Drawer";
+import Button from "common/components/Button";
+import Logo from "common/components/UIElements/Logo";
+import Box from "common/components/Box";
+import HamburgMenu from "common/components/HamburgMenu";
+import Container from "common/components/UI/Container";
+import { DrawerContext } from "common/contexts/DrawerContext";
 
-import { menu_items } from 'common/data/WebAppMinimal';
-import { menu_items_for_Drawer } from 'common/data/WebAppMinimal';
-import ScrollSpyMenu from 'common/components/ScrollSpyMenu';
-import LoginModal from '../LoginModal';
+import { menu_items } from "common/data/WebAppMinimal";
+import { menu_items_for_Drawer } from "common/data/WebAppMinimal";
+import ScrollSpyMenu from "common/components/ScrollSpyMenu";
+import LoginModal from "../LoginModal";
 
-import lockIcon from 'common/assets/image/webAppMinimal/icons/lock.svg';
-import logo from 'common/assets/image/webAppMinimal/logo.png';
-import logoWhite from 'common/assets/image/webAppMinimal/logo-white.png';
+import lockIcon from "common/assets/image/webAppMinimal/icons/lock.svg";
+import logo from "common/assets/image/webAppMinimal/logo.png";
+import logoWhite from "common/assets/image/webAppMinimal/logo-white.png";
 
 // Default close button for modal
 const CloseModalButton = () => (
@@ -36,7 +36,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   // Toggle drawer
   const toggleHandler = () => {
     dispatch({
-      type: 'TOGGLE',
+      type: "TOGGLE",
     });
   };
 
@@ -44,12 +44,12 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   const handleLoginModal = () => {
     openModal({
       config: {
-        className: 'login-modal',
+        className: "login-modal",
         disableDragging: true,
-        width: '100%',
-        height: '100%',
-        animationFrom: { transform: 'translateY(100px)' }, // react-spring <Spring from={}> props value
-        animationTo: { transform: 'translateY(0)' }, //  react-spring <Spring to={}> props value
+        width: "100%",
+        height: "100%",
+        animationFrom: { transform: "translateY(100px)" }, // react-spring <Spring from={}> props value
+        animationTo: { transform: "translateY(0)" }, //  react-spring <Spring to={}> props value
         transition: {
           mass: 1,
           tension: 180,
@@ -64,95 +64,34 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   };
 
   return (
-    <div >
-      <NavbarWrapper style={{backgroundColor:'#151B54'}} {...navbarStyle}>
-     
-      <Container width="1400px">
-        <Box style={{color:'white'}} {...row}>
-          <Box className="logo-container">
-            <Logo
-              href="#"
-              logoSrc={logoWhite}
-              title="Superprops"
-              logoStyle={{width:'100px'}}
-              className="main-logo" />
+    <div>
+      <NavbarWrapper style={{ backgroundColor: "#151B54" }} {...navbarStyle}>
+        <Container width="1400px">
+          <Box style={{ color: "white" }} {...row}>
+            <Box className="logo-container">
+              <Logo
+                href="#"
+                logoSrc={logoWhite}
+                title="Superprops"
+                logoStyle={{ width: "100px" }}
+                className="main-logo"
+              />
 
-            <Logo
-              href="#"
-              logoSrc={logo}
-              title="SaaS Creative"
-              logoStyle={{width:'100px'}}
-              className="sticky-logo"
-            />
-
-          </Box>
-          <Box  {...menuWrapper} className="mainMenuWrapper">
-            {/* <ScrollSpyMenu
+              <Logo
+                href="#"
+                logoSrc={logo}
+                title="SaaS Creative"
+                logoStyle={{ width: "100px" }}
+                className="sticky-logo"
+              />
+            </Box>
+            <Box {...menuWrapper} className="mainMenuWrapper">
+              {/* <ScrollSpyMenu
               
               className="main_menu"
               menuItems={menu_items}
               offset={-70}
             /> */}
-
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                Home
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                Tools
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                Case Studies
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                How it works
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                Pricing
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="navbar_button navbar_button_two">
-                FAQs
-              </a>
-            </Link>
-
-
-            <Button
-              {...button}
-              iconPosition="left"
-              icon={<img src={lockIcon?.src} alt="lock icon" />}
-              title="Login Now"
-              onClick={handleLoginModal}
-              className="navbar_button navbar_button_one "
-            />
-            <Link href="#">
-              <a className="navbar_button navbar_button_two">
-                <Button  onClick={handleLoginModal} {...button} title="Signup" />
-              </a>
-            </Link>
-
-            <Drawer
-              width="420px"
-              placement="right"
-              drawerHandler={<HamburgMenu barColor="#108AFF" />}
-              open={state.isOpen}
-              toggleHandler={toggleHandler}
-            >
-              {/* <ScrollSpyMenu
-                className="mobile_menu"
-                menuItems={menu_items_for_Drawer}
-                drawerClose={true}
-                offset={-100}
-              /> */}
 
               <Link href="/">
                 <a className="navbar_button navbar_button_two">Home</a>
@@ -169,28 +108,91 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               <Link href="/">
                 <a className="navbar_button navbar_button_two">Pricing</a>
               </Link>
+              <Link href="/WhiteLabel">
+                <a className="navbar_button navbar_button_two">White Label</a>
+              </Link>
               <Link href="/">
-                <a className="navbar_button navbar_button_two">faqs</a>
+                <a className="navbar_button navbar_button_two">Blogs</a>
+              </Link>
+              <Link href="/">
+                <a className="navbar_button navbar_button_two">FAQs</a>
               </Link>
 
               <Button
                 {...button}
                 iconPosition="left"
+                icon={<img src={lockIcon?.src} alt="lock icon" />}
                 title="Login Now"
                 onClick={handleLoginModal}
+                className="navbar_button navbar_button_one "
               />
-              <Button
-                {...button}
-                iconPosition="left"
-                title="Sign Up"
-                onClick={handleLoginModal}
-              />
+              <Link href="#">
+                <a className="navbar_button navbar_button_two">
+                  <Button
+                    onClick={handleLoginModal}
+                    {...button}
+                    title="Signup"
+                  />
+                </a>
+              </Link>
 
-            </Drawer>
+              <Drawer
+                width="420px"
+                placement="right"
+                drawerHandler={<HamburgMenu barColor="#108AFF" />}
+                open={state.isOpen}
+                toggleHandler={toggleHandler}
+              >
+                {/* <ScrollSpyMenu
+                className="mobile_menu"
+                menuItems={menu_items_for_Drawer}
+                drawerClose={true}
+                offset={-100}
+              /> */}
+
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">Home</a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">Tools</a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">
+                    Case Studies
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">
+                    How it works
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">Pricing</a>
+                </Link>
+                <Link href="/WhiteLabel">
+                  <a className="navbar_button navbar_button_two">White Label</a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar_button navbar_button_two">faqs</a>
+                </Link>
+
+                <Button
+                  {...button}
+                  iconPosition="left"
+                  title="Login Now"
+                  onClick={handleLoginModal}
+                />
+                <Button
+                  {...button}
+                  iconPosition="left"
+                  title="Sign Up"
+                  onClick={handleLoginModal}
+                />
+              </Drawer>
+            </Box>
           </Box>
-        </Box>
-      </Container>
-    </NavbarWrapper>
+        </Container>
+      </NavbarWrapper>
     </div>
   );
 };
@@ -205,23 +207,23 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   navbarStyle: {
-    className: 'web_app_minimal_navbar',
-    minHeight: '70px',
-    display: 'block',
+    className: "web_app_minimal_navbar",
+    minHeight: "70px",
+    display: "block",
   },
   row: {
     flexBox: true,
-    alignItems: 'center',
-    width: '100%',
+    alignItems: "center",
+    width: "100%",
   },
   logoContainer: {},
   logoStyle: {
-    maxWidth: ['126px', '126px'],
+    maxWidth: ["126px", "126px"],
   },
   button: {},
   menuWrapper: {
     flexBox: true,
-    alignItems: 'center',
+    alignItems: "center",
   },
 };
 

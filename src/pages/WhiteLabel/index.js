@@ -19,7 +19,6 @@ import WhiteLabelGrid from "containers/WebAppMinimal/WhiteLabel";
 import OurCommunity from "containers/WebAppMinimal/OurCommunity";
 import HowItWorks from "containers/WebAppMinimal/HowItWorks";
 import Form from "containers/WebAppMinimal/contactform";
-import NewsFeed from "containers/WebAppMinimal/NewsFeed";
 
 export default function WhiteLabel() {
   return (
@@ -54,7 +53,6 @@ export default function WhiteLabel() {
             <Text content={WhiteLabelData.content} />
           </div>
           <OurCommunity />
-          <NewsFeed />
           <Form id="whitelabel_form" />
           <Footer />
         </ContentWrapper>

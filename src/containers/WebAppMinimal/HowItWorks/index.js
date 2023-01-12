@@ -31,7 +31,7 @@ const HowItWorks = ({ count = 0 }) => {
     >
       <Container>
         <SectionHeading>
-          <Heading content="Real Life Case Studies" />
+          <Heading content="Our Ai White Label Package" />
         </SectionHeading>
 
         <GridForSS>
