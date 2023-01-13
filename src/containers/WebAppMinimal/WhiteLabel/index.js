@@ -6,6 +6,7 @@ import Section, {
   FooterWidget,
   SectionHeading,
   AccordionContent,
+  ServiceText,
 } from "./whiteLabel.style";
 import WhiteLabelData from "common/data/WhiteLabel/index";
 import { Icon } from "react-icons-kit";
@@ -42,13 +43,20 @@ const WhiteLabelGrid = () => {
                         <li className="custom-row" key={item.id}>
                           <Icon icon={handORight} className="icon" />
                           <span>{item.title}</span>
-                          {item.aiTools && (
-                            <i>{`(${item.aiTools} Ai Tools)`}</i>
-                          )}
+                          {/* {item.aiTools && (
+                            <i>{`(${item.aiToToolsols} Ai )`}</i>
+                          )} */}
                         </li>
                       }
                     >
-                      <AccordionContent>{item.content}</AccordionContent>
+                      <AccordionContent>
+                        {item.contents.length > 0 &&
+                          item.contents.map((service) => (
+                            <ServiceText key={service.name}>
+                              {service.name}
+                            </ServiceText>
+                          ))}
+                      </AccordionContent>
                     </Panel>
                   ))}
                 </Collapse>

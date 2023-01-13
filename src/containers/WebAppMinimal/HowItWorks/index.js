@@ -14,14 +14,18 @@ import Section, {
 } from "./howItWorks.style";
 import parallaxBg from "common/assets/image/webAppMinimal/parallax-1.png";
 
-import { HowTosScreenshots } from "common/data/WebAppMinimal";
+import {
+  HowTosScreenshots,
+  HowTosScreenshotsForWhiteLabel,
+} from "common/data/WebAppMinimal";
 
-const HowItWorks = ({ count = 0 }) => {
+const HowItWorks = ({ where = "" }) => {
   const data =
-    count > 0 && count < HowTosScreenshots.length
-      ? HowTosScreenshots.slice(0, count)
-      : HowTosScreenshots;
-
+    where === "whiteLabel" ? HowTosScreenshotsForWhiteLabel : HowTosScreenshots;
+  const headingTitle =
+    where === "whiteLabel"
+      ? "Our Ai White Label Package"
+      : "Real Life Case Studies";
   return (
     <Section
       bgImage={parallaxBg?.src}
@@ -31,7 +35,7 @@ const HowItWorks = ({ count = 0 }) => {
     >
       <Container>
         <SectionHeading>
-          <Heading content="Our Ai White Label Package" />
+          <Heading content={headingTitle} />
         </SectionHeading>
 
         <GridForSS>

@@ -46,7 +46,7 @@ export default function WhiteLabel() {
             </DrawerProvider>
           </Sticky>
           <div style={{ marginTop: 150 }}>
-            <HowItWorks count={3} />
+            <HowItWorks where="whiteLabel" />
           </div>
           <WhiteLabelGrid />
           <div style={{ padding: 50 }}>

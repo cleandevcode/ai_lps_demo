@@ -207,20 +207,17 @@ export const HowTosScreenshots = [
   {
     id: 1,
     icon: ss1,
-    title:
-      "Change the game and allow your users to see real time insights to get engaged",
+    title: "Boca Raton’s Most Professional Photography & Videography Services",
   },
   {
     id: 2,
     icon: ss2,
-    title:
-      "Easy to use navigation tab to allow smooth access to all your Ai Tools and services",
+    title: "Ground Up Construction Services In Los Angeles, California",
   },
   {
     id: 3,
     icon: ss3,
-    title:
-      "Each customer will be able to customize their profile and even add an avatar, maybe even their NFT",
+    title: "Personal Trainer & Model Helping Her Clients Change Their Lives.",
   },
   {
     id: 4,
@@ -236,6 +233,27 @@ export const HowTosScreenshots = [
     id: 6,
     icon: ss6,
     title: "New York City’s Top Brokerage Firm With Offices Around The World",
+  },
+];
+
+export const HowTosScreenshotsForWhiteLabel = [
+  {
+    id: 1,
+    icon: ss1,
+    title:
+      "Change the game and allow your users to see real time insights to get engaged",
+  },
+  {
+    id: 2,
+    icon: ss2,
+    title:
+      "Easy to use navigation tab to allow smooth access to all your Ai Tools and services",
+  },
+  {
+    id: 3,
+    icon: ss3,
+    title:
+      "Each customer will be able to customize their profile and even add an avatar, maybe even their NFT",
   },
 ];
 

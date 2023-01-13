@@ -100,7 +100,6 @@ export const FooterWidget = styled.div`
   .custom-row {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
   }
 
   .icon {
@@ -113,8 +112,9 @@ export const FooterWidget = styled.div`
   }
 
   .rc-collapse-content {
-    background-color: #011336;
+    background-color: transparent;
     border-bottom: unset;
+    margin-left: 30px;
   }
 
   .rc-collapse > .rc-collapse-item {
@@ -139,5 +139,10 @@ export const SectionHeading = styled.div`
 
 export const AccordionContent = styled.span`
   color: white;
+`;
+
+export const ServiceText = styled.p`
+  font-size: 12px;
+  background-color: transparent;
 `;
 export default Section;
